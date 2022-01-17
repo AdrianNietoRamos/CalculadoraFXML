@@ -9,7 +9,8 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
-
+import javafx.scene.control.ContextMenu;
+import javafx.scene.control.MenuItem;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.GridPane;
 
@@ -183,7 +184,21 @@ public Calculadora getModel() {
 
 	public void initialize(URL location, ResourceBundle resources) {
 		resultadoText.textProperty().bind(cal.pantallaProperty());
-		
+		MenuItem menuClasico=new MenuItem("Clasico");
+		menuClasico.setOnAction(e->{
+			view.getStylesheets().clear();
+			view.getStylesheets().add(getClass().getResource("/css/clasico.css").toExternalForm());
+		});
+		MenuItem menuModerno=new MenuItem("Moderno");
+		menuModerno.setOnAction(e->{
+			view.getStylesheets().clear();
+			view.getStylesheets().add(getClass().getResource("/css/moderno.css").toExternalForm());
+			
+		});
+		ContextMenu menu=new ContextMenu(menuClasico,menuModerno);
+		view.setOnContextMenuRequested(e->{
+			menu.show(view,e.getScreenX(),e.getScreenY());
+		});
 	
 
 }
