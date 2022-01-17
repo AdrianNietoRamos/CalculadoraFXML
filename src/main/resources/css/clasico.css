@@ -1,0 +1,73 @@
+.root {
+	-fx-font-family: monospace;
+	-fx-background-color: #333333;
+	-fx-hgap: 1px;
+    -fx-vgap: 1px;
+}
+
+.text-field {
+	-fx-background-color: transparent;
+	-fx-text-fill: lightgray;
+	-fx-font-size: 25pt;
+    -fx-font-weight: bold;
+    -fx-alignment: CENTER-RIGHT;
+    -fx-padding: 10 10 10 10;
+    -fx-background-insets: 0 0 0 0;
+}
+
+.button{
+	-fx-font-size: 16pt;
+	-fx-background-radius: 0;
+	-fx-background-insets: 0 0 0 0;
+}
+.button:focused{
+	-fx-border-color:white;
+}
+.button:armed {
+	-fx-background-color: yellow;
+}
+#ceroButton,#unoButton,#dosButton,#tresButton,#cuatroButton,#cincoButton,#seisButton,#sieteButton,#ochoButton,#nueveButton,#comaButton{
+	-fx-text-fill: white;
+	-fx-background-color:darkgray;
+}
+#ceroButton:hover,#unoButton:hover,#dosButton:hover,#tresButton:hover,#cuatroButton:hover,#cincoButton:hover,#seisButton:hover,#sieteButton:hover,#ochoButton:hover,#nueveButton:hover,#comaButton:hover{
+	-fx-text-fill: darkgray;
+	-fx-background-color:white;
+}
+#ceroButton:pressed,#unoButton:pressed,#dosButton:pressed,#tresButton:pressed,#cuatroButton:pressed,#cincoButton:pressed,#seisButton:pressed,#sieteButton:pressed,#ochoButton:pressed,#nueveButton:pressed,#comaButton:pressed{
+	-fx-text-fill: lightgray;
+	-fx-background-color:black;
+}
+
+#borrarButton,#borrartodoButton {
+	-fx-text-fill:black;
+	-fx-background-color:lightgray;
+	
+}
+#borrarButton:hover,#borrartodoButton:hover {
+	-fx-background-color: white;
+}
+#borrarButton:pressed,#borrartodoButton:pressed {
+	-fx-text-fill: lightgray;
+	-fx-background-color: black;
+}
+
+#sumaButton,#restaButton,#multiplicarButton,#dividirButton {
+	-fx-text-fill:white;
+	-fx-background-color: orange;
+}
+
+#sumaButton:hover,#restaButton:hover,#multiplicarButton:hover,#dividirButton:hover {
+	-fx-background-color:darkorange;
+}
+#sumaButton:pressed,#restaButton:pressed,#multiplicarButton:pressed,#dividirButton:pressed {
+	-fx-text-fill:orange;
+	-fx-background-color:white;
+}
+.button:hover:default{
+	-fx-background-color:red;
+}
+
+.button:default{
+	-fx-background-color:orangered;
+}
